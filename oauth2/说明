@@ -1,0 +1,23 @@
+PostMan
+Post申请授权地址：
+http://localhost:8081/oauth/token?username=sang&password=123&grant_type=password&client_id=password&scope=all&client_secret=123
+用户名：admin或sang
+密码：123
+参数：用户名，密码，授权模式，客户端ID，Scope和客户端密码
+    请求结果：
+    
+    {
+    "access_token": "00502bc3-3994-4d40-a6c3-7f437e91fb0a",
+    "token_type": "bearer",
+    "refresh_token": "009c8697-8f65-4420-b624-99d0e9ab558c",
+    "expires_in": 1315,
+    "scope": "all"
+    }
+    
+    
+Get请求资源地址：
+http://localhost:8081/user/hello?access_token=00502bc3-3994-4d40-a6c3-7f437e91fb0a
+http://localhost:8081/admin/hello?access_token=00502bc3-3994-4d40-a6c3-7f437e91fb0a
+  access_token带上参数
+  请求结果：
+  Hello User!
